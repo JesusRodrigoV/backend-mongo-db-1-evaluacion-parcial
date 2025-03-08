@@ -10,6 +10,8 @@ connectDB();
 
 app.use(express.json());
 
+app.use(contadorOperaciones);
+
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });
