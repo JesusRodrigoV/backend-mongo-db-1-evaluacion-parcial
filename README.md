@@ -59,7 +59,7 @@ Backend-Tecno-Web-2/
 │   ├── models/         # Modelos de datos
 │   ├── routes/         # Rutas de la API
 │   ├── config/         # Configuraciones
-    └── index.js        # Punto de entrada a la aplicaciónn
+│   └── index.js        # Punto de entrada a la aplicaciónn
 ├── bun.lock           # Archivo de bloqueo de dependencias
 ├── package.json       # Archivo de configuración de npm
 └── README.md          # Archivo de documentación
