@@ -5,9 +5,11 @@ import connectDB from "./config/database";
 import contadorOperaciones from "./middlewares/contador";
 import usuariosRouter from "./routes/usuarios";
 import productosRouter from "./routes/productos";
+import Usuario from "./models/Usuario";
+import Producto from "./models/Producto";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 connectDB();
 
@@ -21,8 +23,6 @@ app.get("/op", (req, res) => {
 });
 app.get("/contar", async (req, res) => {
   try {
-    const Usuario = require("./models/Usuario");
-    const Producto = requier("./models/Producto");
     const usuariosCount = await Usuario.countDocuments();
     const productosCount = await Producto.countDocuments();
     res.json({ usuariosCount, productosCount });
