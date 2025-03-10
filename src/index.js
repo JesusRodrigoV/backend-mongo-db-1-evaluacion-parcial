@@ -18,10 +18,10 @@ app.use(express.json());
 app.use(contadorOperaciones);
 app.use("/usuarios", usuariosRouter);
 app.use("/productos", productosRouter);
-app.get("/op", (req, res) => {
+app.get("/operaciones", (req, res) => {
   res.json({ totalOperaciones: req.app.locals.total || 0 });
 });
-app.get("/contar", async (req, res) => {
+app.get("/contadores", async (req, res) => {
   try {
     const usuariosCount = await Usuario.countDocuments();
     const productosCount = await Producto.countDocuments();

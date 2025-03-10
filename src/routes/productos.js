@@ -38,7 +38,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (res, req) => {
+router.delete("/:id", async (req, res) => {
   try {
     const deletedProducto = await Producto.findByIdAndDelete(req.params.id);
     if (!deletedProducto) {
@@ -46,7 +46,7 @@ router.delete("/:id", async (res, req) => {
     }
     res.json({ message: "Producto eliminado" });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(400).json({ error: error.message });
   }
 });
 
